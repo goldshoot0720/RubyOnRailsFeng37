@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'render/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
   get "bank3",to:"render#bank3"
   get "enroll3",to:"render#enroll3"
   get "udemy3",to:"render#udemy3"
+  devise_for :users, skip: [:sessions]
 end
